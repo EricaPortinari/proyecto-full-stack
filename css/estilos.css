@@ -60,10 +60,56 @@ li a:hover {
     display: none;
 }
 
-section {
-    background: url("/hoteles-castillo-francia-hero-image.jpeg");
-    background-repeat: no-repeat;
+body {
+    background: no-repeat url("../img/hoteles-castillo-francia-hero-image.jpeg");
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     height: calc(100vh)- 80px;
+}
+
+@media(max-width:952px) {
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:858px) {
+    .checkbtn {
+        display: block
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #A17935;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hover,
+    li a.active {
+        background: none;
+        color: #43557A;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
 }
