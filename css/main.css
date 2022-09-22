@@ -46,7 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* ---------------- Body ---------------- */
+/* -------------------------------- Body -------------------------------- */
 body {
 	background-color: #eae9e7;
 }
@@ -58,7 +58,7 @@ a:hover {
 	color: #343B6F;
 	text-decoration: underline;
 }
-/* ---------------- Header ---------------- */
+/* -------------------------------- Header -------------------------------- */
 .barrasuperior{
 	display: grid;
 	z-index: 1;
@@ -67,6 +67,7 @@ a:hover {
 	height: 50px;
 	top: 50px; 
 	position: fixed;
+	background-color: #eae9e7;
 }
 .logo {
 	vertical-align: middle;
@@ -77,7 +78,7 @@ a:hover {
 	font-size: 25px;
 	font-weight: bold;
 }
-/* ---------------- Imágenes en scroll horizontal ---------------- */
+/* -------------------------------- Imágenes en scroll horizontal -------------------------------- */
 .album {
 	display: flex;
 	width: 100%;
@@ -103,4 +104,94 @@ a:hover {
 	border: 10px solid #eae9e7;
 	object-fit: fill;
 	height: 100%;
+}
+/* -------------------------------- Footer -------------------------------- */
+footer{
+	display: grid;
+	place-content: center;
+	margin-top: 80px;
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+	background-color: #829485;
+}
+.contenedorf{
+	max-width: 90vw;
+	overflow: hidden;
+}
+.contenedorcolumnas{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul {
+	list-style: none;
+}
+.columnaf{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: calc(20% - 30px);
+	padding: 0 15px;
+}
+.columnaf h4{
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #424B44;
+	text-transform: capitalize;
+	font-weight: 700;
+	position: relative;
+}
+.columnaf h4::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	background-color: #424B44;
+	height: 2px;
+	box-sizing: border-box;
+	width: 80px;
+}
+.columnaf ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.columnaf ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #424B44;
+	text-decoration: none;
+	font-weight: 600;
+	color: #424B44;
+	display: block;
+	transition: all 0.3s ease;
+}
+.columnaf ul li a:hover{
+	color: #eae9e7;
+	padding-left: 10px;
+}
+.columnaf .sociallinks a{
+	z-index: 1;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: rgba (255, 255, 255, 0.2);
+	margin: 0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 25%;
+	color: #eae9e7;
+	transition: all 0.5s ease;
+}
+.columnaf .sociallinks a:hover{
+	transform: scale(1.2);
+}
+/* -------------------------------- Responsive del Footer -------------------------------- */
+@media(max-width: 767px){
+	.columnaf{
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+@media(max-width: 574px){
+	.columnaf{
+		width: 100%;
+	}
 }
