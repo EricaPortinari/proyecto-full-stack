@@ -210,7 +210,7 @@ li a:hover {
 	height: 100%;
 }
 
-/* -------------------------------- Barra superior - Nav -------------------------------- */
+/* -------------------------------- Habitaciones -------------------------------- */
 .contenedorgrid{
     display: grid;
     height: 80vh;
@@ -283,128 +283,141 @@ li a:hover {
     transition: all 0.5s;
     cursor: pointer;
 }
-/*
+
 .contenedorimg{
     position: fixed;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
     background: rgba(0, 0, 0, 0.5);
     display: flex;
+    justify-content: center;
     align-items: center;
+    transition: transform .4s ease-in;
 }
+
+.mover{
+    transform: translateX(0);
+}
+
 .imgicon{
     height: 80%;
+    transform: scale(0);
     display: block;
     object-fit: cover;
 }
+/*
 .copy{
     position: fixed;
     color: #eae9e7;
 }
+*/
 .bx.bx-x{
     position: absolute;
     color: #829485;
     top: 80px;
-    right: 40px;
+    right: 20px;
     font-size: 40px;
     cursor: pointer;
 }
-*/
 
 
 /* -------------------------------- Footer -------------------------------- */
 footer{
-	display: grid;
-	place-content: center;
-	margin-top: 80px;
-	width: 100%;
-	bottom: 0px;
+    display: grid;
+    place-content: center;
+    margin-top: 80px;
+    width: 100%;
+    bottom: 0px;
     left: 0px;
     right: 0px;
-	position: relative;
-	background-color: #829485;
+    position: relative;
+    background-color: #829485;
 }
 .contenedorf{
-	max-width: 90vw;
-	overflow: hidden;
+    max-width: 90vw;
+    overflow: hidden;
 }
 .contenedorcolumnas{
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 ul {
-	list-style: none;
+    list-style: none;
 }
 .columnaf{
-	margin-top: 30px;
-	margin-bottom: 30px;
-	width: calc(20% - 30px);
-	padding: 0 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: calc(20% - 30px);
+    padding: 0 15px;
 }
 .columnaf h4{
-	margin-bottom: 10px;
-	font-size: 18px;
-	color: #424B44;
-	text-transform: capitalize;
-	font-weight: 700;
-	position: relative;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #424B44;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
 }
 .columnaf h4::before{
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: -5px;
-	background-color: #424B44;
-	height: 2px;
-	box-sizing: border-box;
-	width: 80px;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #424B44;
+    height: 2px;
+    box-sizing: border-box;
+    width: 80px;
 }
 .columnaf ul li:not(:last-child){
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .columnaf ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #424B44;
-	text-decoration: none;
-	font-weight: 600;
-	color: #424B44;
-	display: block;
-	transition: all 0.3s ease;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #424B44;
+    text-decoration: none;
+    font-weight: 600;
+    color: #424B44;
+    display: block;
+    transition: all 0.3s ease;
 }
 .columnaf ul li a:hover{
-	color: #eae9e7;
-	padding-left: 10px;
+    color: #424B44;
+    padding-left: 10px;
 }
 .columnaf .sociallinks a{
-	z-index: 1;
-	display: inline-block;
-	height: 30px;
-	width: 30px;
-	background: rgba (255, 255, 255, 0.2);
-	margin: 0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 25%;
-	color: #eae9e7;
-	transition: all 0.5s ease;
+    z-index: 1;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: rgba (255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 25%;
+    color: #eae9e7;
+    transition: all 0.5s ease;
 }
 .columnaf .sociallinks a:hover{
-	transform: scale(1.2);
+    transform: scale(1.2);
 }
 /* -------------------------------- Responsive del Footer -------------------------------- */
 @media(max-width: 767px){
-	.columnaf{
-		width: 50%;
-		margin-bottom: 30px;
-	}
+    .columnaf{
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }
 @media(max-width: 574px){
-	.columnaf{
-		width: 100%;
-	}
+    .columnaf{
+        width: 100%;
+    }
 }
 /* -------------------------------- Ubicación -------------------------------- */
 .mapa {
     margin: 60px;
 }
+
