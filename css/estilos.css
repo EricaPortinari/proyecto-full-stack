@@ -1,15 +1,95 @@
-* {
-    padding: 0;
-    margin: 0;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+  der-box;
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------------------- Body -------------------------------- */
+
+body {
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;;
+	background-color: #eae9e7;
     text-decoration: one;
     list-style: none;
     box-sizing: border-box;
 }
+a {
+	color: #829485;
+	text-decoration: none;
+}
+a:hover {
+	color: #343B6F;
+	text-decoration: underline;
+}
 
+/* -------------------------------- Caracteres -------------------------------- */
+h1{
+    font-size: 30px;
+}
+
+/* -------------------------------- Barra superior - Nav -------------------------------- */
 nav {
-    background: #FBD99E;
     height: 80px;
     width: 100%;
+    z-index: 1;
+    position: fixed;
+    background: #829485;
+    height: 50px;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+.logohid {
+	vertical-align: middle;
 }
 
 .enlace {
@@ -17,19 +97,11 @@ nav {
     padding: 20px 50px;
 }
 
-.logo {
-    height: 40px;
-}
-
-nav ul {
-    float: right;
-    margin-right: 20px;
-}
-
 nav ul li {
     display: inline-block;
-    line-height: 80px;
-    margin: 0 5px
+    line-height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav ul li a {
@@ -42,7 +114,7 @@ nav ul li a {
 
 li a.active,
 li a:hover {
-    background: #7E6E53;
+    background: #eae9e7;
     transition: .5s;
 }
 
@@ -60,13 +132,6 @@ li a:hover {
     display: none;
 }
 
-body {
-    background: no-repeat url("../img/hoteles-castillo-francia-hero-image.jpeg");
-    background-size: cover;
-    background-position: top center;
-    height: calc(100vh)- 80px;
-}
-
 @media(max-width:952px) {
     .enlace {
         padding-left: 20px;
@@ -74,6 +139,10 @@ body {
 
     nav ul li a {
         font-size: 16px;
+    }
+    .logohid {
+        visibility: hidden;
+        display: none;
     }
 }
 
@@ -86,7 +155,7 @@ body {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #A17935;
+        background: #829485;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -112,4 +181,230 @@ body {
     #check:checked~ul {
         left: 0;
     }
+}
+/* -------------------------------- Imágenes en scroll horizontal -------------------------------- */
+.album {
+	display: flex;
+	width: 100%;
+	height: 80vh;
+	overflow: hidden;
+}
+.fotosinicio {
+	display: flex;
+	scroll-snap-type: x mandatory;
+	margin-top: 70px;
+	animation: scrolling 30s linear infinite;
+	
+}
+@keyframes scrolling {
+	0% { transform: translateX(0%);}
+	100% { transform: translateX(-41.5%);}
+}
+.fotoscroll{
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	white-space: nowrap;
+	border: 10px solid #eae9e7;
+	object-fit: fill;
+	height: 100%;
+}
+
+/* -------------------------------- Barra superior - Nav -------------------------------- */
+.contenedorgrid{
+    display: grid;
+    height: 80vh;
+    width: 80vh;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "img5 img5 img5 img1 img1 img1"
+    "img5 img5 img5 img1 img1 img1"
+    "img5 img5 img5 img1 img1 img1"
+    "img4 img4 img6 img6 img3 img3"
+    "img4 img4 img2 img2 img3 img3"
+    "img4 img4 img2 img2 img3 img3";
+    gap: 5px;
+}
+.hab1, .hab2, .hab3, .hab4, .hab5, .hab6{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hab1{
+    grid-area: img1;
+}
+.hab2{
+    grid-area: img2;
+}
+.hab3{
+    grid-area: img3;
+}
+.hab4{
+    grid-area: img4;
+}
+.hab5{
+    grid-area: img5;
+}
+.hab6{
+    grid-area: img6;
+}
+.hab1:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.hab2:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.hab3:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.hab4:hover:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.hab5:hover:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.hab6:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+/*
+.contenedorimg{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+.imgicon{
+    height: 80%;
+    display: block;
+    object-fit: cover;
+}
+.copy{
+    position: fixed;
+    color: #eae9e7;
+}
+.bx.bx-x{
+    position: absolute;
+    color: #829485;
+    top: 80px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+}
+*/
+
+
+/* -------------------------------- Footer -------------------------------- */
+footer{
+	display: grid;
+	place-content: center;
+	margin-top: 80px;
+	width: 100%;
+	bottom: 0px;
+    left: 0px;
+    right: 0px;
+	position: relative;
+	background-color: #829485;
+}
+.contenedorf{
+	max-width: 90vw;
+	overflow: hidden;
+}
+.contenedorcolumnas{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul {
+	list-style: none;
+}
+.columnaf{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: calc(20% - 30px);
+	padding: 0 15px;
+}
+.columnaf h4{
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #424B44;
+	text-transform: capitalize;
+	font-weight: 700;
+	position: relative;
+}
+.columnaf h4::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	background-color: #424B44;
+	height: 2px;
+	box-sizing: border-box;
+	width: 80px;
+}
+.columnaf ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.columnaf ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #424B44;
+	text-decoration: none;
+	font-weight: 600;
+	color: #424B44;
+	display: block;
+	transition: all 0.3s ease;
+}
+.columnaf ul li a:hover{
+	color: #eae9e7;
+	padding-left: 10px;
+}
+.columnaf .sociallinks a{
+	z-index: 1;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: rgba (255, 255, 255, 0.2);
+	margin: 0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 25%;
+	color: #eae9e7;
+	transition: all 0.5s ease;
+}
+.columnaf .sociallinks a:hover{
+	transform: scale(1.2);
+}
+/* -------------------------------- Responsive del Footer -------------------------------- */
+@media(max-width: 767px){
+	.columnaf{
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+@media(max-width: 574px){
+	.columnaf{
+		width: 100%;
+	}
+}
+/* -------------------------------- Ubicación -------------------------------- */
+.mapa {
+    margin: 60px;
 }
