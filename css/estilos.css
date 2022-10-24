@@ -334,6 +334,111 @@ li a:hover {
     cursor: pointer;
 }
 
+/* -------------------------------- Servicios -------------------------------- */
+.contenedorgridserv{
+    display: grid;
+    height: 80vh;
+    width: 80vh;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "img5 img5 img5 img1 img1 img1"
+    "img5 img5 img5 img1 img1 img1"
+    "img5 img5 img5 img1 img1 img1"
+    "img4 img4 img6 img6 img3 img3"
+    "img4 img4 img2 img2 img3 img3"
+    "img4 img4 img2 img2 img3 img3";
+    gap: 5px;
+}
+.ser1, .ser2, .ser3, .ser4, .ser5, .ser6{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ser1{
+    grid-area: img1;
+}
+.ser2{
+    grid-area: img2;
+}
+.ser3{
+    grid-area: img3;
+}
+.ser4{
+    grid-area: img4;
+}
+.ser5{
+    grid-area: img5;
+}
+.ser6{
+    grid-area: img6;
+}
+.ser1:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.ser2:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.ser3:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.ser4:hover:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.ser5:hover:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.ser6:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.contenedorserv{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s ease-in;
+}
+.descripserv{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eae9e7;
+}
+.move{
+    transform: translateX(0);
+}
+
+.bx.bx-x{
+    position: absolute;
+    color: #829485;
+    top: 80px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
 
 /* -------------------------------- Footer -------------------------------- */
 footer{
