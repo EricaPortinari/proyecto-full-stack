@@ -1,1 +1,0 @@
-# proyecto-full-stack
