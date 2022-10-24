@@ -71,6 +71,12 @@ a:hover {
 h1{
     font-size: 30px;
 }
+h2{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
 
 /* -------------------------------- Barra superior - Nav -------------------------------- */
 nav {
@@ -291,13 +297,18 @@ li a:hover {
     top: 0;
     left: 0;
     transform: translateX(-100%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform .4s ease-in;
 }
-
+.descrip{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eae9e7;
+}
 .mover{
     transform: translateX(0);
 }

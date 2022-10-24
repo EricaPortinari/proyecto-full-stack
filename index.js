@@ -4,14 +4,14 @@ const containerimg = document.querySelector('.imgicon');
 /*const copy = document.querySelector('copy')*/
 
 images.forEach(image =>{
-    image.addEventListener('click', ()=>{
-      /*  imageContainer.classList.toggle('mover');*/
-        addImage(image.getAttribute('src'), image.getAttribute('alt'));
-      /*  console.log(image.getAttribute('src'));
-        console.log(image.getAttribute('alt'));*/
+  image.addEventListener('click', ()=>{
+      imageContainer.classList.toggle('mover');
+      /*addImage(image.getAttribute('src'), image.getAttribute('alt'));*/
+      console.log(image.getAttribute('src'));
+      console.log(image.getAttribute('alt'));
         
     
-    })
+  })
 })
 
 const addImage = (srcImage,altImage)=>{
